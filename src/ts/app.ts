@@ -1,5 +1,7 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+declare var faker: any;
+
 $(() => {
     var promise = $.ajax({
         type: 'get',
@@ -14,14 +16,15 @@ $(() => {
     });
 
     $('#post-action').on('click', e => {
+        var date: Date = new Date();
         var promise = $.ajax({
             type: 'post',
             url: 'http://localhost:3000/api/v1/entries',
             dataType: 'json',
             data: {
                 entries: {
-                    title: 'hoge',
-                    content: 'hogehoge'
+                    title: 'hoge_' + date.getTime(),
+                    content: 'content_' + date.getTime()
                 }
             },
             async: true

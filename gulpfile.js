@@ -61,8 +61,8 @@ gulp.task('compress', function() {
 gulp.task('copy', function() {
   return merge(
     gulp.src([
-      './bower_components/underscore/underscore-min.js',
-      './bower_components/jquery/dist/jquery.min.js',
+      './bower_components/underscore/underscore.js',
+      './bower_components/jquery/dist/jquery.js',
       './bower_components/fastclick/lib/fastclick.js',
       './vendor/js/*.js'
     ]).pipe(gulp.dest('dist/js/')),
