@@ -7,7 +7,7 @@ make it now.
 development
 
 ```sh
-$ gom install
+$ gom -development install
 ```
 
 production
