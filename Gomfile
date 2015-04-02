@@ -1,0 +1,5 @@
+gom 'github.com/go-sql-driver/mysql'
+gom 'github.com/jinzhu/gorm'
+
+group :production do
+end
