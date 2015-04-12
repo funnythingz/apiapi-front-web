@@ -7,8 +7,8 @@ import (
 
 func main() {
 	goji.Get("/entries", entries)
-	goji.Get(regexp.MustCompile(`^/entries/(?P<id>\d+)$`), entry)
 	goji.Post("/entries", createEntries)
+	goji.Get(regexp.MustCompile(`^/entries/(?P<id>\d+)$`), entry)
 
 	// Exception
 	goji.NotFound(notFound)
